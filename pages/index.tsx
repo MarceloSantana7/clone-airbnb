@@ -4,6 +4,7 @@ import Header from './../components/Header';
 import Banner from './../components/Banner';
 import SmallCard from '../components/SmallCard';
 import MediumCard from './../components/MediumCard';
+import LargeCard from './../components/LargeCard';
 
 type ExploreData = {
   location: string;
@@ -55,6 +56,13 @@ const Home: NextPage<HomeProps> = ({exploreData, cardsData}) => {
             <MediumCard key={img} img={img} title={title}/>
           ))}
           </div>
+
+          <LargeCard
+          img='https://links.papareact.com/4cj'
+          title="The Greatest Outdoors"
+          description='Wishlists curated by Airbnb'
+          buttonText='Get Inspired'
+          />
         </section>
       </main>
     </div>
