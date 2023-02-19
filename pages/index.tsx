@@ -5,6 +5,7 @@ import Banner from './../components/Banner';
 import SmallCard from '../components/SmallCard';
 import MediumCard from './../components/MediumCard';
 import LargeCard from './../components/LargeCard';
+import Footer from '../components/Footer';
 
 type ExploreData = {
   location: string;
@@ -63,6 +64,7 @@ const Home: NextPage<HomeProps> = ({exploreData, cardsData}) => {
           description='Wishlists curated by Airbnb'
           buttonText='Get Inspired'
           />
+          <Footer/>
         </section>
       </main>
     </div>
