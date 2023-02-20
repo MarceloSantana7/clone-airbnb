@@ -6,7 +6,7 @@ import "react-date-range/dist/styles.css"
 import "react-date-range/dist/theme/default.css"
 import { useRouter } from 'next/router'
 
-function Header({placeholder}) {
+function Header({placeholder}:{placeholder?: string})  {
 
   const [searchInput, setSearchInput] = useState('')
   const [startDate,setStartDate] = useState(new Date())
