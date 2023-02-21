@@ -53,7 +53,10 @@ function Map({searchResults}:SearchProps) {
     }}
     >
     {searchResults.map((result) => (   
-      <div key={result.long}> 
+      <div key={result.long} className="flex justify-center">
+        {selectedLocation?.lat == result.lat && (
+          <div className="relative text-2xl m-20 bg-red-500 text-white rounded-md px-5 py-3">{result.title}</div>
+          )} 
         <Marker
           latitude={result.lat}
           longitude={result.long}
@@ -61,21 +64,10 @@ function Map({searchResults}:SearchProps) {
           <p onClick={()=> {
             setSelectedLocation(result)
             }} className="cursor-pointer text-2xl animate-bounce">
-          📌  
+          {selectedLocation?.lat == result.lat ? ('🎯') : ('📌')}     
           </p>   
-           
         </Marker>
       </div>))}
-      {selectedLocation && (
-        <Popup
-          offset={3} 
-          longitude={selectedLocation.long} 
-          latitude={selectedLocation.lat}
-          onClose={() => setSelectedLocation(null)}
-        >
-          You are here
-        </Popup>
-      )}
       </ReactMapGL>)
 
 }
