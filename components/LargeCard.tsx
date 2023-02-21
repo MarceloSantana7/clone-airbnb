@@ -15,6 +15,9 @@ function LargeCard({img, title, description, buttonText}: LargeData) {
           <Image
           src={img}
           fill
+          sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"
           style={{objectFit: 'cover'}}
           alt={title}
           className="rounded-2xl"

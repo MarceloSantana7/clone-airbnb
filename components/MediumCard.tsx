@@ -14,6 +14,9 @@ function MediumCard({img, title}:CardsData) {
         src={img}
         alt={title}
         fill
+        sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"
         style={{objectFit:"contain"}}
         className="rounded-xl"
         />

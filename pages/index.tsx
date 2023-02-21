@@ -64,9 +64,10 @@ const Home: NextPage<HomeProps> = ({exploreData, cardsData}) => {
           description='Wishlists curated by Airbnb'
           buttonText='Get Inspired'
           />
-          <Footer/>
+          
         </section>
       </main>
+      <Footer/>
     </div>
   )
 }
